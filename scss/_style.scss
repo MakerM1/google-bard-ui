@@ -1,0 +1,104 @@
+body {
+    background-color: $mainBackColor;
+
+    header {
+        padding: 8px;
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        border: 2px solid white;
+        justify-content: space-between;
+
+        .left-side {
+            display: flex;
+            align-items: center;
+
+
+            i {
+                font-size: 20px;
+                color: white;
+                padding: 12px;
+                margin: 0 4px 0 4px;
+                cursor: pointer;
+                border-radius: 50%;
+                transition: all 0.15s;
+
+                &:hover {
+                    background-color: #303131;
+                }
+
+                &:active {
+                    background-color: #656666;
+                }
+            }
+
+        }
+
+        .right-side {
+            color: white;
+
+            nav {
+                display: flex;
+                max-width: 300px;
+                width: 100%;
+                justify-content: space-around;
+                align-items: center;
+
+                .apps {
+                    margin-right: 10px;
+                    border-radius: 50%;
+                    transition: all 0.15s;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #303131;
+                    }
+
+                    &:active {
+                        background-color: #656666;
+                    }
+
+                    img {
+                        max-width: 25px;
+                        width: 100%;
+                    }
+                }
+
+                .nav-item {
+                    font-size: 20px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.15s;
+
+                    &:hover {
+                        background-color: #303131;
+                    }
+
+                    &:active {
+                        background-color: #656666;
+                    }
+                }
+
+                img {
+                    max-width: 48px;
+                    width: 100%;
+                    height: 48px;
+                    border-radius: 50%;
+                }
+
+                .fa-gear {
+                    margin-right: 10px;
+                }
+            }
+
+        }
+    }
+}
