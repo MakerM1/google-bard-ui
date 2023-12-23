@@ -8,6 +8,12 @@
       src="https://kit.fontawesome.com/2d3e948390.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/global.css" />
   </head>
   <body>
@@ -31,5 +37,98 @@
         </nav>
       </div>
     </header>
+    <main>
+      <section class="chat">
+        <div class="chat-container">
+          <div class="chat-box">
+            <div class="top-content">
+              <div class="logo">
+                <img src="imgs/sparkle_resting.gif" alt="" />
+                <i class="fa-solid fa-rotate-right"></i>
+              </div>
+              <div class="welcoming">
+                <h1>Hello again</h1>
+                <h5>Tell me what&apos;s on your mind, or pick a suggestion.</h5>
+              </div>
+              <div class="cards-container">
+                <div class="cards">
+                  <h2 class="card-title1">Understand</h2>
+                  <div class="contents">
+                    <div class="content">
+                      <p>settle a debate</p>
+                    </div>
+                    <div class="content">
+                      <img src="imgs/youtube-logo.svg" alt="" />
+                      <p>help solve a problem</p>
+                    </div>
+                    <div class="content">
+                      <img src="imgs/maps-logo.svg" alt="" />
+                      <p>find something nearby</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards">
+                  <h2 class="card-title2">Create</h2>
+                  <div class="contents">
+                    <div class="content">
+                      <p>mocktail recipe</p>
+                    </div>
+                    <div class="content">
+                      <p>revise my writing</p>
+                    </div>
+                    <div class="content">
+                      <p>interview questions</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cards">
+                  <h2 class="card-title3">Explore</h2>
+                  <div class="contents">
+                    <div class="content">
+                      <img src="imgs/hotels-logo.svg" alt="" />
+                      <p>see the sights</p>
+                    </div>
+                    <div class="content">
+                      <p>best beaches in...</p>
+                    </div>
+                    <div class="content">
+                      <img src="imgs/maps-logo.svg" alt="" />
+                      <p>food hotspots</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="message-content">
+            <div class="input">
+              <div class="image-upload">
+                <label for="image-upload">
+                  <i class="fa-regular fa-images image-upload"></i>
+                </label>
+                <input type="file" id="image-upload" />
+              </div>
+              <div class="message-send-cont">
+                <input
+                  type="text"
+                  class="message-send"
+                  placeholder="Enter a prompt here"
+                  required
+                />
+                <i class="fa-solid fa-microphone"></i>
+              </div>
+              <button class="send-button-cont">
+                <i class="fa-solid fa-share send-button"></i>
+              </button>
+            </div>
+            <div class="notice">
+              Bard may display inaccurate info, including about people, so
+              double-check its responses. <span>Your privacy & Bard</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="scripts/index.js"></script>
   </body>
 </html>

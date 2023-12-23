@@ -1,5 +1,6 @@
 body {
     background-color: $mainBackColor;
+    font-family: Arial, Helvetica, sans-serif;
 
     header {
         padding: 8px;
@@ -8,7 +9,6 @@ body {
         left: 0;
         right: 0;
         top: 0;
-        border: 2px solid white;
         justify-content: space-between;
 
         .left-side {
@@ -88,9 +88,9 @@ body {
                 }
 
                 img {
-                    max-width: 48px;
+                    max-width: 38px;
                     width: 100%;
-                    height: 48px;
+                    height: 38px;
                     border-radius: 50%;
                 }
 
@@ -99,6 +99,295 @@ body {
                 }
             }
 
+        }
+    }
+
+    .chat {
+        margin-top: 60px;
+        padding: 10px;
+
+        .chat-container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #131314;
+            padding: 10px;
+            overflow-y: scroll;
+            height: 87vh;
+            border-radius: 30px;
+            position: relative;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #dadce0;
+                border-radius: 500px;
+
+                &:hover {
+                    background-color: #dadce079;
+                }
+            }
+
+            .chat-box {
+                max-width: 916px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 12px;
+
+                .top-content {
+
+                    .logo {
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 32px;
+
+                        img {
+                            width: 30px;
+                        }
+
+                        i {
+                            color: #a8c7fa;
+                            font-size: 18px;
+                            background-color: #1e1f20;
+                            padding: 10px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            transition: all 0.15s;
+
+                            &:hover {
+                                background-color: #2a2d31;
+                            }
+                        }
+                    }
+
+                    .welcoming {
+                        h1 {
+                            font-size: 2.75rem;
+                            color: white;
+                            font-weight: 600;
+                            margin-bottom: 24px;
+                        }
+
+                        h5 {
+                            font-size: 1.375rem;
+                            color: rgba(255, 255, 255, 0.64);
+                            margin-bottom: 24px;
+                        }
+                    }
+
+                    .cards-container {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .cards {
+                            max-width: 271px;
+                            width: 100%;
+                            padding: 30px 20px 70px 20px;
+                            background-color: #1e1f20;
+                            border-radius: 20px;
+
+                            h2 {
+                                font-weight: 700;
+                                font-size: 25px;
+                                background: linear-gradient(90deg, #cf8d7c, #a77cb4);
+                                background-clip: text;
+                                color: transparent;
+                                margin-bottom: 16px;
+
+                            }
+
+                            .card-title2 {
+                                background: linear-gradient(90deg, #a77cb4, #7f7dd1);
+                                background-clip: text;
+                                color: transparent;
+                            }
+
+                            .card-title3 {
+                                background: linear-gradient(90deg, #7f7dd1, #548dd9 100%, #548dd9 0);
+                                background-clip: text;
+                                color: transparent;
+                            }
+
+                            .contents {
+                                display: flex;
+                                flex-direction: column;
+                                flex-wrap: wrap;
+                                justify-content: space-around;
+                                height: 100%;
+
+                                .content {
+                                    color: white;
+                                    padding: 15px 15px;
+                                    background-color: #131314;
+                                    border-radius: 40px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-around;
+                                    width: fit-content;
+                                    cursor: pointer;
+                                    transition: all 0.15s;
+
+                                    img {
+                                        width: 24px;
+                                        margin-right: 10px;
+                                        background-color: #1e1f20;
+                                        border-radius: 50%;
+                                        padding: 3px;
+                                        vertical-align: middle;
+                                    }
+
+                                    p {
+                                        display: inline-block;
+                                        font-size: .875rem;
+                                    }
+
+                                    &:hover {
+                                        background-color: #34383e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .message-content {
+            max-width: 940px;
+            width: 100%;
+            min-height: 100px;
+            position: sticky;
+            left: 15.5%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px;
+            text-align: center;
+
+            .input {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+
+
+                button {
+                    background-color: transparent;
+                    border: 2px solid transparent;
+                    font-size: 20px;
+                    padding: 0;
+                }
+
+                .image-upload {
+                    color: white;
+
+                    #image-upload {
+                        display: none;
+                    }
+
+                    label {
+                        font-size: 20px;
+                        cursor: pointer;
+                        padding: 10px;
+                        border-radius: 50%;
+                        transition: all 0.15s;
+
+                        &:hover {
+                            background-color: #303131;
+                        }
+
+                        &:active {
+                            background-color: #656666;
+                        }
+                    }
+                }
+
+                .send-button {
+                    color: gray;
+                    border-radius: 50%;
+                    padding: 10px;
+                    transition: all 0.15s;
+
+                    &.active {
+                        cursor: pointer;
+
+
+                        color: #6a9ae4;
+
+                        &:hover {
+                            background-color: #6a9be425;
+                        }
+
+                        &:active {
+                            background-color: #6a9be454;
+                        }
+                    }
+
+                }
+
+                .message-send-cont {
+                    width: 90%;
+                    position: relative;
+
+                    .message-send {
+                        width: 100%;
+                        background-color: transparent;
+                        border: 2px solid #787b7e;
+                        height: 35px;
+                        padding: 25px 50px 25px 20px;
+                        border-radius: 60px;
+                        color: white;
+                        font-size: 17px;
+                        outline: none;
+                        transition: all 0.15s;
+
+                        &::placeholder {
+                            color: #787b7e;
+                            font-size: 17px;
+                        }
+
+                        &:focus {
+                            border: 2px solid #8ab4f8;
+                        }
+                    }
+
+                    .fa-microphone {
+                        position: absolute;
+                        color: white;
+                        right: 10px;
+                        top: 50%;
+                        font-size: 20px;
+                        transform: translate(0, -50%);
+                        padding: 8px 10px;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        transition: all 0.15s;
+
+                        &:hover {
+                            background-color: #303131;
+                        }
+
+                        &:active {
+                            background-color: #656666;
+                        }
+                    }
+                }
+            }
+
+            .notice {
+                color: #7d7f7e;
+                font-size: 12px;
+
+                span {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
